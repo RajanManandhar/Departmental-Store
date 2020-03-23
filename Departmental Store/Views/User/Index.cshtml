@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Departmental_Store.Models.Tpin>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-2 col-lg-2">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
+                    Invoices
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary">
+                                Invoice 1
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <a href="#"><i class="fas fa-plus-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-lg-10">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
+                    Invoice
+                </div>
+                <div class="card-body">
+                    <form action="/" method="post">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <label>Customer TPIN</label>
+                                <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="TPIN...">
+                               
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <label>Customer Name</label>
+                                <input class="form-control " type="text" placeholder="Customer Name..." />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label>Product Id</label>
+                                <input class="form-control" type="number" placeholder="Prodcut Id..." />
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label>Product Name</label>
+                                <input class="form-control" type="text" placeholder="Product Name..." />
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label>Product Qty</label>
+                                <input class="form-control" type="number" placeholder="Product Qty..." />
+                            </div>
+                        </div>
+                        <br />
+                        <input class="btn btn-success" type="submit" value="Add" />
+                        <button class="btn btn-danger">Clear</button>
+                    </form>
+                    <br />
+                    <br />
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">S.N</th>
+                                <th scope="col">Products</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="#"><i class="far fa-window-close"></i></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="#"><i class="far fa-window-close"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

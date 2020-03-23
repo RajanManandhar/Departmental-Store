@@ -1,0 +1,49 @@
+﻿@model List<Departmental_Store.Models.Product>
+
+
+
+<a asp-action="Add" class="btn btn-outline-success"> Create</a>
+
+
+<form asp-controller="Product" asp-action="Index" method="get">
+    <p>
+        Title: <input type="text" name="searchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table table-hover table-bordered">
+    <tr>
+        <th>ProductId</th>
+        <th>ProductName</th>
+        <th>Price</th>
+        <th>Exp Date</th>
+        <th>Customer TPIN</th>
+        <th>Action</th>
+    </tr>
+
+
+
+
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td> @data.ProductId</td>
+            <td>@data.ProductName</td>
+            <td>
+                @data.Price
+            </td>
+            <td>@data.ExpDate</td>
+            <td> @data.TPIN</td>
+
+            <td>
+                <a asp-route-id="@data.ProductId" asp-action="Add">Add</a>
+
+
+            </td>
+        </tr>
+    }
+</table>
+
+
+

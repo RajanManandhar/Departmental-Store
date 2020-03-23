@@ -1,0 +1,39 @@
+﻿@model Departmental_Store.Models.Product
+<h1>ADD Product</h1>
+
+<form asp-action="Create" method="post">
+    <label>ProducId</label>
+    <input asp-for="ProductId" />
+    <span asp-validation-for="ProductId" class="text-danger"></span><br />
+
+    <label>ProductName</label>
+    <input asp-for="ProductName" />
+    <span asp-validation-for="ProductName" class="text-danger"></span><br />
+
+    <label>Price</label>
+    <input asp-for="Price" />
+    <span asp-validation-for="Price"></span><br />
+
+
+
+    <label for="start">ExpDate</label>
+    <input type="date" asp-for="ExpDate" name="trip-start"
+           value="2018-07-22"
+           min="2018-01-01" max="2018-12-31">
+    <span asp-validation-for="ExpDate" class="text-danger"></span><br />
+    <a></a>
+
+
+
+
+
+    <label>  TPIN</label>
+    <input asp-for="TPIN" />
+    <span asp-validation-for="TPIN"></span><br />
+
+    <input value="save" type="submit" />
+    <a asp-action="Index"></a>
+</form>
+<a asp-action="Index">Back</a>
+
+
